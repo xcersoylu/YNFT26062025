@@ -11,7 +11,7 @@ authorization master ( instance )
   update;
   delete;
   association _item { }
-  mapping for znft_t_dlv_cus
+  mapping for ynft_t_dlv_cus
     {
       companycode               = companycode;
       deliverydocument          = deliverydocument;
@@ -40,7 +40,7 @@ authorization dependent by _header
   delete;
   field ( readonly ) companycode, deliverydocument, deliverydocumentitem, quantityunit;
   association _header;
-  mapping for znft_t_dlvit_cus
+  mapping for ynft_t_dlvit_cus
     {
       companycode           = companycode;
       deliverydocument      = deliverydocument;
