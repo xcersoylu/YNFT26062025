@@ -13,7 +13,7 @@ authorization master ( instance )
   create;
   update;
   delete;
-  mapping for znft_t_t005
+  mapping for ynft_t_t005
   {
     Csrce = csrce;
     Ctype = ctype;

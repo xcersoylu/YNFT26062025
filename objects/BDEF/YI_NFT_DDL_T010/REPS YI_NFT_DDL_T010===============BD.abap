@@ -14,7 +14,7 @@ authorization master ( instance )
   create;
   update;
   delete;
-  mapping for znft_t_t010
+  mapping for ynft_t_t010
   {
     Bklas = bklas ;
     Bukrs = bukrs ;

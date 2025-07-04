@@ -11,4 +11,11 @@ authorization master ( instance )
   update;
   delete;
   field ( readonly : update ) ParameterName, ParameterKey;
+  mapping for ynft_t_parameter
+  {
+  ParameterName = parametername;
+  ParameterKey = parameterkey;
+  Value = value;
+  Description = description;
+  }
 }

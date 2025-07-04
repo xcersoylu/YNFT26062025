@@ -11,4 +11,11 @@ authorization master ( instance )
   create;
   update;
   delete;
+  mapping for ynft_t_t007
+  {
+   Bukrs = bukrs;
+   Kurst = kurst;
+   Moregr = moregr;
+   Morepc = morepc;
+  }
 }
