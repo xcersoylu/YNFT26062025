@@ -22,6 +22,13 @@
   "data":
   [
    {
+    "LANGU":"E",
+    "ID":"ZNFT_IMP_LP_SPACE",
+    "VERSION":"A",
+    "TITLE":"Import Transactions",
+    "DESCRIPTION":"Import Space"
+   },
+   {
     "LANGU":"T",
     "ID":"ZNFT_IMP_LP_SPACE",
     "VERSION":"A",

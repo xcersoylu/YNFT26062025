@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"YNFT_E_TAX_PERCENTAGE",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Tax Percentage",
+    "REPTEXT":"Tax Percentage",
+    "SCRTEXT_S":"Tax Perc.",
+    "SCRTEXT_M":"Tax Percentage",
+    "SCRTEXT_L":"Tax Percentage"
+   },
+   {
+    "ROLLNAME":"YNFT_E_TAX_PERCENTAGE",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

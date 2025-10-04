@@ -52,6 +52,17 @@
   [
    {
     "ROLLNAME":"YNFT_E_VGBEL",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "AS4VERS":0,
+    "DDTEXT":"Reference Document",
+    "REPTEXT":"Reference Doc.",
+    "SCRTEXT_S":"Ref.Doc.",
+    "SCRTEXT_M":"Reference Doc.",
+    "SCRTEXT_L":"Reference Doc."
+   },
+   {
+    "ROLLNAME":"YNFT_E_VGBEL",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "AS4VERS":0,

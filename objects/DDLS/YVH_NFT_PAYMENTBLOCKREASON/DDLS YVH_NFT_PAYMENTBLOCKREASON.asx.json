@@ -26,6 +26,13 @@
    {
     "DDLNAME":"YVH_NFT_PAYMENTBLOCKREASON",
     "STRUCOBJN":"YVH_NFT_PAYMENTBLOCKREASON",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "DDTEXT":"Payment Blockign Value Help"
+   },
+   {
+    "DDLNAME":"YVH_NFT_PAYMENTBLOCKREASON",
+    "STRUCOBJN":"YVH_NFT_PAYMENTBLOCKREASON",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "DDTEXT":"Ödeme Blokajı Arama Yardımı"

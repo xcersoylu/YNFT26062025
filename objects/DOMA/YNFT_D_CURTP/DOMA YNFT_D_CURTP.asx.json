@@ -161,6 +161,127 @@
   [
    {
     "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":1,
+    "AS4VERS":0,
+    "DDTEXT":"Document currency",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"00"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":2,
+    "AS4VERS":0,
+    "DDTEXT":"Company currency",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"10"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":3,
+    "AS4VERS":0,
+    "DDTEXT":"Company currency, company valuation",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"11"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":4,
+    "AS4VERS":0,
+    "DDTEXT":"Company currency , profit center valuation",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"12"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":5,
+    "AS4VERS":0,
+    "DDTEXT":"Control code currency",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"20"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":6,
+    "AS4VERS":0,
+    "DDTEXT":"Holding currency",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"30"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":7,
+    "AS4VERS":0,
+    "DDTEXT":"Holding currency,holding valuation",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"31"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":8,
+    "AS4VERS":0,
+    "DDTEXT":"Holding currency, profit center valuation",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"32"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":9,
+    "AS4VERS":0,
+    "DDTEXT":"Hard currency",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"40"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":10,
+    "AS4VERS":0,
+    "DDTEXT":"Endeks currency",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"50"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "VALPOS":11,
+    "AS4VERS":0,
+    "DDTEXT":"Company currency",
+    "DOMVAL_LD":"",
+    "DOMVAL_HD":"",
+    "DOMVALUE_L":"60"
+   },
+   {
+    "DOMNAME":"YNFT_D_CURTP",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "VALPOS":1,

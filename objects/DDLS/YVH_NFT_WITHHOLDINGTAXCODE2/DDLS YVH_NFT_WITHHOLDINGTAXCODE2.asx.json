@@ -26,6 +26,13 @@
    {
     "DDLNAME":"YVH_NFT_WITHHOLDINGTAXCODE2",
     "STRUCOBJN":"YVH_NFT_WITHHOLDINGTAXCODE2",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "DDTEXT":"Stopage tax value help"
+   },
+   {
+    "DDLNAME":"YVH_NFT_WITHHOLDINGTAXCODE2",
+    "STRUCOBJN":"YVH_NFT_WITHHOLDINGTAXCODE2",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "DDTEXT":"Stopaj Vergisi Arama Yardımı"

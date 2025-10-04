@@ -20,7 +20,27 @@
     DATA(lv_request_body) = request->get_text( ).
     DATA(lv_get_method) = request->get_method( ).
     /ui2/cl_json=>deserialize( EXPORTING json = lv_request_body CHANGING data = ms_request ).
+***mal çıkışı kontrolü
+    SELECT lips~deliverydocument , lips~deliverydocumentitem
+      FROM @ms_request-items AS items INNER JOIN i_deliverydocumentitem AS lips ON lips~deliverydocument = items~deliverydocument
+                                                                                AND lips~deliverydocumentitem = items~deliverydocumentitem
+    WHERE lips~goodsmovementstatus = 'C'
+    ORDER BY lips~deliverydocument , lips~deliverydocumentitem
+    INTO TABLE @DATA(lt_goodsmovement).
 
+    LOOP AT ms_request-items INTO DATA(ls_item).
+      READ TABLE lt_goodsmovement INTO DATA(ls_goodsmovement) WITH KEY deliverydocument = ls_item-deliverydocument
+                                                                       deliverydocumentitem = ls_item-deliverydocumentitem BINARY SEARCH.
+      IF sy-subrc <> 0.
+        MESSAGE ID ycl_nft_imp_util_class=>mc_msgid
+           TYPE 'S'
+           NUMBER 026
+           WITH ls_item-deliverydocument ls_item-deliverydocumentitem INTO DATA(lv_message).
+        APPEND lv_message TO ms_response-error_messages.
+      ENDIF.
+    ENDLOOP.
+
+****
     DATA(lv_company_code) = VALUE #( ms_request-items[ 1 ]-companycode OPTIONAL ).
     SELECT SINGLE *
       FROM ynft_t_t011
@@ -59,6 +79,7 @@
     APPEND 'TAX_DETERMINATION_DATE'     TO lt_header_pro.
     APPEND 'SUPPLIER_INVOICE_IS_CREDIT' TO lt_header_pro.
     APPEND 'PAYMENT_TERMS'              TO lt_header_pro.
+    APPEND 'DIRECT_QUOTED_EXCHANGE_RAT' TO lt_header_pro.
 
     APPEND 'SUPPLIER_INVOICE_ITEM'      TO lt_gl_pro.
     APPEND 'DEBIT_CREDIT_CODE'          TO lt_gl_pro.
@@ -95,6 +116,14 @@
         ASSERT lo_http_client IS BOUND.
         LOOP AT ms_request-items INTO DATA(ls_selected_line).
           CLEAR ls_supplier.
+          IF ls_selected_line-documentcurrency <> 'TRY'.
+            SELECT SINGLE exchangerate~exchangerate
+            FROM ynft_t_dlv_cus AS dlv INNER JOIN i_exchangeraterawdata AS exchangerate ON exchangerate~validitystartdate = dlv~customsdeclerationdate
+            WHERE exchangerate~sourcecurrency = @ls_selected_line-documentcurrency
+              AND exchangerate~targetcurrency = 'TRY'
+              AND exchangerate~exchangeratetype = 'M'
+            INTO @DATA(lv_exchangerate).
+          ENDIF.
           ls_supplier =  VALUE #( company_code                = ls_selected_line-companycode
                                   document_date               = ms_request-documentdate
                                   posting_date                = ms_request-postingdate
@@ -106,6 +135,7 @@
                                   tax_determination_date      = ls_selected_line-postingdate
                                   supplier_invoice_is_credit  = ''
                                   payment_terms               = ls_parameter-zterm
+                                  direct_quoted_exchange_rat  = lv_exchangerate
                                   to_suplr_invc_item_pur_ord  = VALUE #( ( supplier_invoice_item      = '0001'
                                                                            purchase_order             = ls_selected_line-referencesddocument
                                                                            purchase_order_item        = ls_selected_line-referencesddocumentitem+1(*)
@@ -166,7 +196,7 @@
             MESSAGE ID ycl_nft_imp_util_class=>mc_msgid
                TYPE 'S'
                NUMBER 016
-               WITH ls_supplier_return-supplier_invoice INTO DATA(lv_message).
+               WITH ls_supplier_return-supplier_invoice INTO lv_message.
             APPEND lv_message TO ms_response-error_messages.
             FREE: lo_request, lo_item_child, lo_item_child2, lo_response.
             CLEAR: ls_r005_check, lv_message.

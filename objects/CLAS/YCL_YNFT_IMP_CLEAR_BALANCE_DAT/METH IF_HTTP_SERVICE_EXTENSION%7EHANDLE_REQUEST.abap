@@ -11,7 +11,7 @@
              costtype               TYPE ynft_t_r002-costtype,
              accountnumber          TYPE ynft_t_r002-accountnumber,
              documenttype           TYPE ynft_t_dlv_cus-documenttype,
-             deliveryquantity       TYPE i_deliverydocumentitem-ActualDeliveryQuantity,
+             deliveryquantity       TYPE i_deliverydocumentitem-actualdeliveryquantity,
              accountingdocument_inv TYPE ynft_t_r005-accountingdocument_inv,
              fiscalyear_inv         TYPE ynft_t_r005-fiscalyear_inv,
            END OF ty_r002.
@@ -60,8 +60,8 @@
                                                AND cus_clea~referencedocumentitem = shipment~deliverydocumentitem
         INNER JOIN ynft_t_dlvit_cus AS cus_ship ON cus_ship~deliverydocument      = shipment~deliverydocument
                                                AND cus_ship~deliverydocumentitem  = shipment~deliverydocumentitem
-        INNER JOIN I_DeliveryDocumentItem AS lips ON lips~DeliveryDocument     = cus_clea~deliverydocument
-                                                 AND lips~DeliveryDocumentitem = cus_clea~deliverydocumentitem
+        INNER JOIN i_deliverydocumentitem AS lips ON lips~deliverydocument     = cus_clea~deliverydocument
+                                                 AND lips~deliverydocumentitem = cus_clea~deliverydocumentitem
         INTO TABLE @DATA(lt_shipment_clearence).
 
       LOOP AT lt_r002 INTO DATA(ls_r002) WHERE documenttype = '1'.
@@ -86,6 +86,8 @@
       ENDLOOP.
       IF lt_ship_costs[] IS NOT INITIAL.
         APPEND LINES OF lt_ship_costs TO lt_r002.
+        SORT lt_r002 BY companycode accountingdocument fiscalyear accountingdocumentitem.
+        DELETE ADJACENT DUPLICATES FROM lt_r002 COMPARING companycode accountingdocument fiscalyear accountingdocumentitem.
       ENDIF.
     ENDIF.
 
@@ -151,7 +153,7 @@
                       ddtyp_tx~text AS documenttype_tx
         FROM @lt_r002 AS r002
         INNER JOIN ynft_t_dlv_cus AS dlv_cus ON dlv_cus~deliverydocument = r002~deliverydocument
-        INNER JOIN i_deliverydocument AS delivery ON delivery~DeliveryDocument = dlv_cus~deliverydocument
+        INNER JOIN i_deliverydocument AS delivery ON delivery~deliverydocument = dlv_cus~deliverydocument
         LEFT OUTER JOIN i_supplier ON i_supplier~supplier = delivery~supplier
         LEFT OUTER JOIN ddcds_customer_domain_value_t( p_domain_name = 'YNFT_D_DDTYP' ) AS ddtyp_tx ON ddtyp_tx~value_low = dlv_cus~documenttype
                                                                                                    AND ddtyp_tx~language  = @sy-langu
@@ -175,7 +177,7 @@
              po~material                 AS product,
              producttext~productname,
              bseg~supplier,
-             Supplier~suppliername,
+             supplier~suppliername,
              item~accountnumber,
              CASE cus~documenttype WHEN '1' THEN cus_it~shipquantity ELSE cus_it~clearencequantity END AS deliveryquantity,
              cus_it~quantityunit         AS deliveryquantityunit,
@@ -194,12 +196,12 @@
         INNER JOIN ynft_t_dlv_cus           AS cus         ON cus~deliverydocument        = item~deliverydocument
         INNER JOIN ynft_t_dlvit_cus         AS cus_it      ON cus_it~deliverydocument     = item~deliverydocument
                                                           AND cus_it~deliverydocumentitem = item~deliverydocumentitem
-        INNER JOIN I_PurchaseOrderItemAPI01 AS po          ON po~purchaseorder            = cus_it~purchaseorder
-                                                          AND po~PurchaseOrderItem        = cus_it~purchaseorderitem
+        INNER JOIN i_purchaseorderitemapi01 AS po          ON po~purchaseorder            = cus_it~purchaseorder
+                                                          AND po~purchaseorderitem        = cus_it~purchaseorderitem
         LEFT OUTER JOIN yvh_nft_ctype       AS costtype    ON costtype~ctype              = item~costtype
-        LEFT OUTER JOIN i_producttext       AS producttext ON producttext~product         = po~Material
+        LEFT OUTER JOIN i_producttext       AS producttext ON producttext~product         = po~material
                                                           AND producttext~language        = @sy-langu
-        left outer join I_supplier         as supplier on supplier~supplier = bseg~supplier
+        LEFT OUTER JOIN i_supplier         AS supplier ON supplier~supplier = bseg~supplier
         INTO CORRESPONDING FIELDS OF TABLE @ms_response-items.
 
       "Sort & Conversion işlemleri

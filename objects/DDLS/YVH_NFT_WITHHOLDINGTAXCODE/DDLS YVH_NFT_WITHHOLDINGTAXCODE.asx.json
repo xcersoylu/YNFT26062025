@@ -26,6 +26,13 @@
    {
     "DDLNAME":"YVH_NFT_WITHHOLDINGTAXCODE",
     "STRUCOBJN":"YVH_NFT_WITHHOLDINGTAXCODE",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "DDTEXT":"Stoppage Value Help"
+   },
+   {
+    "DDLNAME":"YVH_NFT_WITHHOLDINGTAXCODE",
+    "STRUCOBJN":"YVH_NFT_WITHHOLDINGTAXCODE",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "DDTEXT":"Stopaj Vergisi Arama Yardımı"

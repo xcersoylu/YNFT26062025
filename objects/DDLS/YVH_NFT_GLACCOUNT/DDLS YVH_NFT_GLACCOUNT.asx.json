@@ -26,6 +26,13 @@
    {
     "DDLNAME":"YVH_NFT_GLACCOUNT",
     "STRUCOBJN":"YVH_NFT_GLACCOUNT",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "DDTEXT":"Main Account value help"
+   },
+   {
+    "DDLNAME":"YVH_NFT_GLACCOUNT",
+    "STRUCOBJN":"YVH_NFT_GLACCOUNT",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "DDTEXT":"Ana Hesap Arama Yardımı"

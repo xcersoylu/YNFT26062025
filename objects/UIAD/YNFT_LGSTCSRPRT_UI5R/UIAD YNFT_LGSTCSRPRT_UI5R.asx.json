@@ -33,7 +33,7 @@
     "REFRESH_INTERVALL":0,
     "DISPLAY_NUMBER_UNIT":"",
     "FLAVOR_ID":"",
-    "CHANGED_AT":"+020250129081152",
+    "CHANGED_AT":"+020251003202733",
     "CHANGED_BY":"SAP_CUSTOMER",
     "MASTERLANG":"",
     "ACH_COMPONENT":"",
@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"Logistics Report"
+    "ALT_SMART_LINK_TITLE":"Logistics Report",
+    "DESCRIPTION":"{{appDescription}}"
    },
    {
     "APP_ID":"YNFT_LGSTCSRPRT_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"Lojistik Raporu"
+    "ALT_SMART_LINK_TITLE":"Lojistik Raporu",
+    "DESCRIPTION":""
    }
   ]
  },
@@ -145,8 +147,8 @@
     "CRELEASE":"",
     "DELFLAG":"",
     "TRANSLTTXT":"",
-    "CREATED_ON":"2025-01-29",
-    "CHECK_DATE":"2025-01-29",
+    "CREATED_ON":"2025-10-03",
+    "CHECK_DATE":"2025-10-03",
     "CHECK_CFG":""
    }
   ]

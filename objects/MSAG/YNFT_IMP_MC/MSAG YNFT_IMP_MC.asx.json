@@ -398,6 +398,24 @@
     "DOKLRELES":"",
     "DOKLDATE":"0000-00-00",
     "DOKLTIME":"00:00:00"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YNFT_IMP_MC026",
+    "LANGU":"D",
+    "TYP":"E",
+    "DOKVERSION":1,
+    "DOKSTATE":"N",
+    "DOKFORM":"S_DOCU_SHOW",
+    "DOKSTYLE":"S_DOCUS1",
+    "DOKFUSER":"SAP_CUSTOMER",
+    "DOKFRELES":"",
+    "DOKFDATE":"0000-00-00",
+    "DOKFTIME":"00:00:00",
+    "DOKLUSER":"SAP_CUSTOMER",
+    "DOKLRELES":"",
+    "DOKLDATE":"0000-00-00",
+    "DOKLTIME":"00:00:00"
    }
   ]
  },
@@ -646,6 +664,17 @@
     "TXTLINES":0,
     "DOKSTATE":"N",
     "SELFDEF":"3"
+   },
+   {
+    "ID":"NA",
+    "OBJECT":"YNFT_IMP_MC026",
+    "LANGU":"D",
+    "TYP":"E",
+    "VERSION":1,
+    "MASTERLANG":"X",
+    "TXTLINES":0,
+    "DOKSTATE":"N",
+    "SELFDEF":"3"
    }
   ]
  },
@@ -760,6 +789,36 @@
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"021",
     "TEXT":"You exceeded the balance for SAS no &1-&2"
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"YNFT_IMP_MC",
+    "MSGNR":"022",
+    "TEXT":"There are lines without clearance amount entered."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"YNFT_IMP_MC",
+    "MSGNR":"023",
+    "TEXT":"Identify account for cost type &1"
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"YNFT_IMP_MC",
+    "MSGNR":"024",
+    "TEXT":"&1 is already reversed."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"YNFT_IMP_MC",
+    "MSGNR":"025",
+    "TEXT":"Reverse operation is not completed successfully."
+   },
+   {
+    "SPRSL":"E",
+    "ARBGB":"YNFT_IMP_MC",
+    "MSGNR":"026",
+    "TEXT":"First making good receipt for &1-&2"
    },
    {
     "SPRSL":"T",
@@ -892,6 +951,12 @@
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"025",
     "TEXT":"Ters kayıt alınamadı."
+   },
+   {
+    "SPRSL":"T",
+    "ARBGB":"YNFT_IMP_MC",
+    "MSGNR":"026",
+    "TEXT":"&1-&2 için mal girişi yapınız."
    }
   ]
  },
@@ -930,154 +995,161 @@
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"000",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"001",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"003",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"006",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"007",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"008",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"009",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"010",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"011",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"012",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"013",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"014",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"015",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"016",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"017",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"019",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"020",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"021",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"022",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"023",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"024",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    },
    {
     "ARBGB":"YNFT_IMP_MC",
     "MSGNR":"025",
     "NAME":"SAP_CUSTOMER",
-    "DATUM":"2025-07-04",
+    "DATUM":"2025-10-04",
+    "SELFDEF":"3"
+   },
+   {
+    "ARBGB":"YNFT_IMP_MC",
+    "MSGNR":"026",
+    "NAME":"SAP_CUSTOMER",
+    "DATUM":"2025-10-04",
     "SELFDEF":"3"
    }
   ]

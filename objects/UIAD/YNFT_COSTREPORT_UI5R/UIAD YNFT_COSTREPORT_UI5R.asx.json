@@ -108,7 +108,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"Cost Report"
+    "ALT_SMART_LINK_TITLE":"Cost Report",
+    "DESCRIPTION":"Cost Report"
    },
    {
     "APP_ID":"YNFT_COSTREPORT_UI5R",
@@ -117,7 +118,8 @@
     "TILE_SUBTITLE":"",
     "TILE_KEYWORDS":"",
     "TILE_INFORMATION":"",
-    "ALT_SMART_LINK_TITLE":"Masraf Raporu"
+    "ALT_SMART_LINK_TITLE":"Masraf Raporu",
+    "DESCRIPTION":"Masraf Raporu"
    }
   ]
  },

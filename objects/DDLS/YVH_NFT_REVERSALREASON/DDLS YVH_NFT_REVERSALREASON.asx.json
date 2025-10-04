@@ -26,6 +26,13 @@
    {
     "DDLNAME":"YVH_NFT_REVERSALREASON",
     "STRUCOBJN":"YVH_NFT_REVERSALREASON",
+    "DDLANGUAGE":"E",
+    "AS4LOCAL":"N",
+    "DDTEXT":"Reversal reason"
+   },
+   {
+    "DDLNAME":"YVH_NFT_REVERSALREASON",
+    "STRUCOBJN":"YVH_NFT_REVERSALREASON",
     "DDLANGUAGE":"T",
     "AS4LOCAL":"N",
     "DDTEXT":"Ters Kayıt Nedeni"
